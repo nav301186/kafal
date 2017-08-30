@@ -4,6 +4,9 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { SearchPage } from '../pages/search/search';
+import { SearchResultPage} from '../pages/search-result/search-result';
+import {EducationalDetails} from '../components/educational-details/educational-details';
 import { LoginPage } from '../pages/login/login';
 import { LoginFormPage } from '../pages/login-form/login-form';
 import { ProfilePage } from '../pages/profile/profile';
@@ -12,29 +15,34 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
-  declarations: [
-    MyApp,
-    HomePage,
-      LoginPage,
-      LoginFormPage,
-      ProfilePage,
-  ],
-  imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp),
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HomePage,
-      LoginPage,
-      LoginFormPage,
-      ProfilePage,
-  ],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+    declarations: [
+        MyApp,
+        HomePage,
+        LoginPage,
+        LoginFormPage,
+        ProfilePage,
+        SearchPage,
+        SearchResultPage,
+        EducationalDetails
+    ],
+    imports: [
+        BrowserModule,
+        IonicModule.forRoot(MyApp),
+    ],
+    bootstrap: [IonicApp],
+    entryComponents: [
+        MyApp,
+        HomePage,
+        LoginPage,
+        LoginFormPage,
+        ProfilePage,
+        SearchPage,
+        SearchResultPage,
+    ],
+    providers: [
+        StatusBar,
+        SplashScreen,
+        {provide: ErrorHandler, useClass: IonicErrorHandler}
+    ]
 })
 export class AppModule {}

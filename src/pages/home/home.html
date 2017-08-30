@@ -1,28 +1,6 @@
-<ion-split-pane>
-    <ion-menu [content]="menu">
-        <ion-header>
-            <ion-toolbar color="secondary">
-            </ion-toolbar>
-        </ion-header>
-        <ion-content>
-            <ion<button ion-item>
-                    <ion-icon name="search">
-                        Search
-                    </ion-icon>
-                </button>-list>
-                <button ion-item >
-                    <ion-icon name="md-notifications" large>
-                        Notification
-                    </ion-icon>
-                </button>
-                <button ion-item>
-                    <ion-icon name="contact">
-                        Profile
-                    </ion-icon>
-                </button>
-            </ion-list>
-        </ion-content>
-    </ion-menu>
+<ion-tabs>
+  <ion-tab [root]="tab1Root" tabTitle="Search" tabIcon="search"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Me" tabIcon="home"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Notifications" tabIcon="notifications"></ion-tab>
+</ion-tabs>
 
-    <ion-nav #menu main [root]="rootPage"></ion-nav>
-</ion-split-pane>

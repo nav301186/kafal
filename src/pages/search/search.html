@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-navbar style="background-color: #9999CC">
+        <ion-title >
+            Search
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="bg-search">
+    <ion-list>
+    <ion-list-header class="range-selector">
+     Age
+      <ion-badge item-end color="dark">{{structure.lower}}</ion-badge>
+      <ion-badge item-end color="dark">{{structure.upper}}</ion-badge>
+    </ion-list-header>
+    <ion-item>
+      <ion-range dualKnobs="true" pin="true" [(ngModel)]="structure" (ionChange)="onChange($event)" color="dark">
+        <ion-label range-left>-0</ion-label>
+        <ion-label range-right>100</ion-label>
+      </ion-range>
+    </ion-item>
+    </ion-list>
+  <ion-list radio-group [(ngModel)]="relationship">
+      <ion-list-header class="range-selector">
+          Gender
+      </ion-list-header>
+  <ion-item>
+    <ion-label>Male</ion-label>
+    <ion-radio value="male" checked></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>Female</ion-label>
+    <ion-radio value="female"></ion-radio>
+  </ion-item>
+</ion-list>
+<button class="btn-full-width"
+        secondary
+        round
+        block
+        ion-button
+        color="default"
+        (click) ="OnSubmit()"
+>Submit</button>
+</ion-content>

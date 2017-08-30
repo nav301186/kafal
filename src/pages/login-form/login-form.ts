@@ -24,6 +24,6 @@ export class LoginFormPage {
     }
 
    showHomeScreen(){
-       this.navCtrl.setRoot(HomePage);
+       this.navCtrl.push(HomePage);
     }
 }
