@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Messages</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div *ngFor="let chatMessage of messages">
+        <div [ngClass]="chatMessage.sender == 'self' ? 'right' : 'left'">
+            <div >
+                {{ chatMessage.message }}
+            </div>
+        </div>
+    </div>
+</ion-content>
+<ion-footer>
+    <div float-left>  
+        <ion-input type="text"
+                   [(ngModel)]="message"
+                   text-wrap
+                   block
+                   placeholder="some text here"
+        >
+        </ion-input>
+    </div>
+    <div float-right>
+        <button
+            ion-button
+            round
+            icon-end
+            (click)="onSend()"
+        >
+            send
+            <ion-icon name="send"></ion-icon>
+        </button>
+    </div>
+</ion-footer>

@@ -6,10 +6,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SearchPage } from '../pages/search/search';
 import { SearchResultPage} from '../pages/search-result/search-result';
-import {EducationalDetails} from '../components/educational-details/educational-details';
+import {RegistrationDetailsPage} from '../pages/registration-details/registration-details';
+import {EducationalDetailsPage} from '../pages/educational-details/educational-details';
+import {EducationalDetailsComponent} from '../components/educational-details/educational-details';
+import {BasicDetailsComponent} from '../components/basic-details/basic-details';
 import { LoginPage } from '../pages/login/login';
 import { LoginFormPage } from '../pages/login-form/login-form';
 import { ProfilePage } from '../pages/profile/profile';
+import { ChatWindowPage } from '../pages/chat-window/chat-window';
+import { AgePage } from '../pages/age/age';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,7 +28,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
         ProfilePage,
         SearchPage,
         SearchResultPage,
-        EducationalDetails
+        EducationalDetailsComponent,
+        BasicDetailsComponent,
+        ChatWindowPage,
+        RegistrationDetailsPage,
+        AgePage,
+        EducationalDetailsPage
     ],
     imports: [
         BrowserModule,
@@ -38,6 +48,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
         ProfilePage,
         SearchPage,
         SearchResultPage,
+        ChatWindowPage,
+        RegistrationDetailsPage,
+        AgePage,
+        EducationalDetailsPage
     ],
     providers: [
         StatusBar,

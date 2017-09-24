@@ -1,3 +1,8 @@
 page-profile {
-
+    .btn-default {
+        background-color: #9999CC;
+    }
+    .btn-outline-text{
+        color: $btn-background-color;
+    }
 }

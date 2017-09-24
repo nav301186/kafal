@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
 
 /**
- * Generated class for the EducationalDetailsComponent component.
+ * Generated class for the AgeComponent component.
  *
  * See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
  * for more info on Angular Components.
  */
 @Component({
-  selector: 'educational-details',
-  templateUrl: 'educational-details.html'
+  selector: 'age',
+  templateUrl: 'age.html'
 })
-export class EducationalDetailsComponent {
+export class AgeComponent {
 
   text: string;
 
   constructor() {
-    console.log('Hello EducationalDetailsComponent Component');
+    console.log('Hello AgeComponent Component');
     this.text = 'Hello World';
   }
 

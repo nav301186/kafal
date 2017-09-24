@@ -1,0 +1,27 @@
+page-chat-window {
+
+    %talk-bubble {
+        margin: 12px;
+        width: 200px;
+        height: auto;
+        /* background-color: lightBlue; */
+        padding: 30px;
+        background: lightblue;
+        border-radius: 25px;
+        display: block;
+        clear: both;
+    }
+
+
+    .right{
+        @extend %talk-bubble;
+        float: right;
+    }
+
+    .left{
+        @extend %talk-bubble;
+        float: left;
+    }
+
+
+}

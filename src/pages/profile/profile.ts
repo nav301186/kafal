@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams , ToastController} from 'ionic-angular';
+import {ChatWindowPage} from '../chat-window/chat-window';
 
 /**
  * Generated class for the ProfilePage page.
@@ -10,18 +11,30 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-profile',
-  templateUrl: 'profile.html',
+    selector: 'page-profile',
+    templateUrl: 'profile.html',
 })
 export class ProfilePage {
+    @ViewChild('intbtn') intBtn: any;
 
     details: string = "persnal";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+    constructor(public toastCtrl: ToastController,public navCtrl: NavController, public navParams: NavParams) {
+    }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfilePage');
-  }
+    onSendMessage(){
+        this.navCtrl.push(ChatWindowPage);
+    }
 
+    sendInteresteRequest() {
+
+        let interestedToast: any = this.toastCtrl.create(
+            {
+                message: "A request has been send to the user",
+                duration: 3000,
+                position: 'top'
+            }
+        );
+        interestedToast.present();
+    }
 }
