@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {ProfilePage} from '../profile/profile';
 import {SearchPage} from '../search/search';
+import {MePage} from '../me/me';
 
 @Component({
   selector: 'page-home',
@@ -9,7 +10,7 @@ import {SearchPage} from '../search/search';
 })
 export class HomePage {
     tab1Root= SearchPage;
-    tab2Root= ProfilePage;
+    tab2Root= MePage;
 
     constructor() {
   }

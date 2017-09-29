@@ -1,13 +1,45 @@
-<!-- <ion-header> -->
-<!-- <ion-navbar class="header-color" style="height: 60px"> -->
-<!-- <ion-row style="height: 100%" justify-content-center> -->
-<!-- <img src="../../assets/logo/logo-1.png" col-4 class="logo-word"> -->
-<!-- </ion-row> -->
-<!-- </ion-navbar> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Basic Details
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
-    <ion-item class="height-30-percent">
-        <ion-label style="font: bold">Date of Birth</ion-label>
-        <ion-datetime displayFormat="MMM DD, YYYY" min="1994-03-14" max="2012-12-09" [(ngModel)]="firefoxReleased"></ion-datetime>
-    </ion-item>
-    <button ion-button color="secondary" full round (click)="showEducationalDetails()" padding-top> Next</button>
+    <ion-row class="height-20-percent">
+        <ion-item>
+            <ion-label color="primary">Date of Birth</ion-label>
+            <ion-datetime displayFormat="MMM DD, YYYY" min="1994-03-14" max="2012-12-09" [(ngModel)]="firefoxReleased"></ion-datetime>
+        </ion-item>
+    </ion-row>
+    <ion-row padding-top>
+        <ion-list style="width: 100%" radio-group [(ngModel)]="relationship">
+            <ion-label color="primary" padding-left>
+                Gender
+            </ion-label>
+            <ion-item>
+                <ion-label>Male</ion-label>
+                <ion-radio value="male" checked></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Female</ion-label>
+                <ion-radio value="female"></ion-radio>
+            </ion-item>
+        </ion-list>
+    </ion-row>
+    <ion-row>
+        <ion-item>
+            <ion-label color="primary">Current City</ion-label>
+            <ion-input placeholder="City" text-right></ion-input>
+        </ion-item>
+    </ion-row>
+    <ion-row padding-top justify-content-center> 
+        <button ion-button color="secondary" full round (click)="showEducationalDetails()"> Next</button>
+    </ion-row>
 </ion-content>

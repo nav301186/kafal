@@ -18,3 +18,17 @@
     .height-30-percent{
         padding-top: 30vh;
     }
+    .height-20-percent{
+        padding-top: 20vh;
+    }
+
+    .9-font-weight {
+        font: 9px;
+        font-weight: 9px;
+    }
+
+    .date-picker{
+        @extend .9-font-weight;
+        background-color: white;
+    }
+

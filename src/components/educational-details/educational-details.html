@@ -1,6 +1,8 @@
 <ion-item-group>
     <ion-list-header color="dark" icon-start>
-        <ion-icon name="book"></ion-icon>
+            <button ion-button icon-end color="dark" float-right (click)="onEdit()">
+            <ion-icon name="build" ></ion-icon>
+            </button>
         Educational details
     </ion-list-header>
     <ion-item>
@@ -8,7 +10,7 @@
             Graduation
         </ion-label>
         <ion-note  color="dark" item-end>
-            Pune University
+            {{educational_details.graduation}}
         </ion-note>
     </ion-item>
     <ion-item>
@@ -16,7 +18,7 @@
             Intermediate
         </ion-label>
         <ion-note color="dark" item-end text-wrap>
-            Doon International School
+            {{educational_details.intermediate}}
         </ion-note>
     </ion-item>
     <ion-item>

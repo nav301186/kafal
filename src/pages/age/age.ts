@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams , ViewController} from 'ionic-angular';
 import {EducationalDetailsPage} from '../educational-details/educational-details';
 
 /**
@@ -16,7 +16,7 @@ import {EducationalDetailsPage} from '../educational-details/educational-details
 })
 export class AgePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    constructor(public viewCtrl: ViewController, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -25,5 +25,10 @@ export class AgePage {
     showEducationalDetails(){
         this.navCtrl.push(EducationalDetailsPage)
     }
+
+    dismiss(){
+        this.viewCtrl.dismiss();
+    }
+
 }
  

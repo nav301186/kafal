@@ -1,18 +1,39 @@
-<!--
-  Generated template for the EducationalDetailsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>educational-details</ion-title>
-  </ion-navbar>
-
+    <ion-toolbar>
+        <ion-title>
+            Basic Details
+        </ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()">
+                <span ion-text color="primary" showWhen="ios">Cancel</span>
+                <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-header>
-
-
 <ion-content padding>
-
+    <ion-list  radio-group [(ngModel)]="relationship">
+        <ion-list-header color="secondary">
+            Highest Qualification
+        </ion-list-header>
+        <ion-item>
+            <ion-label>Post Graduation</ion-label>
+            <ion-radio value="pg" checked></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Graduation</ion-label>
+            <ion-radio value="graduation"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Intermediate (12th)</ion-label>
+            <ion-radio value="intermediate"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Senior Secondary (10th)</ion-label>
+            <ion-radio value="ss"></ion-radio>
+        </ion-item>
+    </ion-list>
+    <ion-row justify-content-center padding-top>
+        <button ion-button color="secondary" round full  (click)="showLoginPage()"> Done</button>
+    </ion-row>
 </ion-content>

@@ -8,6 +8,7 @@ import { SearchPage } from '../pages/search/search';
 import { SearchResultPage} from '../pages/search-result/search-result';
 import {RegistrationDetailsPage} from '../pages/registration-details/registration-details';
 import {EducationalDetailsPage} from '../pages/educational-details/educational-details';
+import {MePage} from '../pages/me/me';
 import {EducationalDetailsComponent} from '../components/educational-details/educational-details';
 import {BasicDetailsComponent} from '../components/basic-details/basic-details';
 import { LoginPage } from '../pages/login/login';
@@ -33,7 +34,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
         ChatWindowPage,
         RegistrationDetailsPage,
         AgePage,
-        EducationalDetailsPage
+        EducationalDetailsPage,
+        MePage
     ],
     imports: [
         BrowserModule,
@@ -51,7 +53,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
         ChatWindowPage,
         RegistrationDetailsPage,
         AgePage,
-        EducationalDetailsPage
+        EducationalDetailsPage,
+        MePage
     ],
     providers: [
         StatusBar,
