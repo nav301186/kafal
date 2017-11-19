@@ -1,6 +1,6 @@
 // http://ionicframework.com/docs/theming/
 
-
+@import '../theme/variables.scss';
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -32,3 +32,25 @@
         background-color: white;
     }
 
+    .header-color{
+        background-color: #0069ff;
+    }
+
+    .text-white{
+        color: white !important;
+        font-weight: 500;
+    }
+
+    .toolbar-title-md {
+        color: white !important;
+        font-size: 2.2rem !important;
+    }
+
+    .toolbar-title-ios {
+        color: white !important;
+        font-size: 2.7rem !important;
+    }
+
+    .ion-navbar.toolbar {
+        background-color: blue;
+    }

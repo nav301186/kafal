@@ -1,5 +1,5 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header  >
+  <ion-toolbar color="primaray">
     <ion-title>
       Basic Details
     </ion-title>
@@ -12,34 +12,36 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-    <ion-row class="height-20-percent">
+    <ion-list padding-top>
         <ion-item>
-            <ion-label color="primary">Date of Birth</ion-label>
+            <ion-label>Date of Birth</ion-label>
             <ion-datetime displayFormat="MMM DD, YYYY" min="1994-03-14" max="2012-12-09" [(ngModel)]="firefoxReleased"></ion-datetime>
         </ion-item>
-    </ion-row>
-    <ion-row padding-top>
-        <ion-list style="width: 100%" radio-group [(ngModel)]="relationship">
-            <ion-label color="primary" padding-left>
-                Gender
-            </ion-label>
-            <ion-item>
-                <ion-label>Male</ion-label>
-                <ion-radio value="male" checked></ion-radio>
-            </ion-item>
-            <ion-item>
-                <ion-label>Female</ion-label>
-                <ion-radio value="female"></ion-radio>
-            </ion-item>
-        </ion-list>
-    </ion-row>
-    <ion-row>
-        <ion-item>
-            <ion-label color="primary">Current City</ion-label>
-            <ion-input placeholder="City" text-right></ion-input>
-        </ion-item>
-    </ion-row>
-    <ion-row padding-top justify-content-center> 
-        <button ion-button color="secondary" full round (click)="showEducationalDetails()"> Next</button>
-    </ion-row>
+      <ion-item>
+          <ion-label>Gender</ion-label>
+          <ion-select [(ngModel)]="gender">
+              <ion-option>Male</ion-option>
+              <ion-option>Female</ion-option>
+          </ion-select>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>Sub Cast</ion-label>
+          <ion-select [(ngModel)]="subCaste" multiple="false">
+              <ion-option>Rajput</ion-option>
+              <ion-option>Brahmin</ion-option>
+              <ion-option>Other</ion-option>
+          </ion-select>
+      </ion-item>
+    <ion-item>
+        <ion-label class="range-selector">
+            Current City
+        </ion-label>
+        <ion-select  [(ngModel)]="selected_cities" multiple="false" cancelText="nah" okText="okay">
+            <ion-option *ngFor="let city of cities" value={{city}}>{{city}}</ion-option>
+        </ion-select>
+    </ion-item>
+    </ion-list>
+
+        <button sytyle="margin-top: 80px" ion-button color="secondary" full round (click)="showEducationalDetails()"> Next</button>
 </ion-content>

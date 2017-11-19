@@ -18,6 +18,11 @@ export class SearchPage {
 
     value: any;
     structure: any = {lower: 33, upper: 60}
+
+    public selected_cities: string[] ;
+
+    public cities: any = ["Pune","Delhi", "Banglore","Gurgaon","Dehradun"];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

@@ -1,11 +1,9 @@
-<ion-header>
-    <ion-navbar style="background-color: #9999CC">
-        <ion-title >
-            Search
-        </ion-title>
-    </ion-navbar>
+<ion-header class="header-color" style="height: 60px">
+    <ion-row style="height: 100%" justify-content-center>
+        <ion-title col-4 class="text-white"> Search</ion-title>
+</ion-row>
 </ion-header>
-<ion-content class="bg-search">
+<ion-content padding-top>
     <ion-list>
     <ion-list-header class="range-selector">
      Age
@@ -18,26 +16,36 @@
         <ion-label range-right>100</ion-label>
       </ion-range>
     </ion-item>
-    </ion-list>
-  <ion-list radio-group [(ngModel)]="relationship">
-      <ion-list-header class="range-selector">
-          Gender
-      </ion-list-header>
-  <ion-item>
-    <ion-label>Male</ion-label>
-    <ion-radio value="male" checked></ion-radio>
-  </ion-item>
-  <ion-item>
-    <ion-label>Female</ion-label>
-    <ion-radio value="female"></ion-radio>
-  </ion-item>
+
+      <ion-item>
+          <ion-label>Gender</ion-label>
+          <ion-select [(ngModel)]="gender">
+              <ion-option>Male</ion-option>
+              <ion-option>Female</ion-option>
+          </ion-select>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>Sub Cast</ion-label>
+          <ion-select [(ngModel)]="subCaste" multiple="true">
+              <ion-option>Rajput</ion-option>
+              <ion-option>Brahmin</ion-option>
+              <ion-option>Other</ion-option>
+          </ion-select>
+      </ion-item>
+    <ion-item>
+        <ion-label class="range-selector">
+            Current City
+        </ion-label>
+        <ion-select  [(ngModel)]="selected_cities" multiple="true" cancelText="nah" okText="okay">
+            <ion-option *ngFor="let city of cities" value={{city}}>{{city}}</ion-option>
+        </ion-select>
+    </ion-item>
 </ion-list>
-<button class="btn-full-width"
-        secondary
-        round
+<button round
         block
         ion-button
-        color="default"
+        color="secondary"
         (click) ="OnSubmit()"
 >Submit</button>
 </ion-content>

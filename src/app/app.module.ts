@@ -16,6 +16,7 @@ import { LoginFormPage } from '../pages/login-form/login-form';
 import { ProfilePage } from '../pages/profile/profile';
 import { ChatWindowPage } from '../pages/chat-window/chat-window';
 import { AgePage } from '../pages/age/age';
+import { NotificationsPage } from '../pages/notifications/notifications';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -35,7 +36,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
         RegistrationDetailsPage,
         AgePage,
         EducationalDetailsPage,
-        MePage
+        MePage,
+        NotificationsPage 
     ],
     imports: [
         BrowserModule,
